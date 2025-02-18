@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Employee Management</h2>
+        <input type="text" id="search" placeholder="Search by Name...">
+        <br>
+        <input type="text" id="id" placeholder="Employee ID">
+        <input type="text" id="name" placeholder="Name">
+        <input type="text" id="position" placeholder="Position">
+        <input type="text" id="department" placeholder="Department">
+        <input type="number" id="salary" placeholder="Salary">
+        <input type="date" id="dateOfHire">
+        <input type="text" id="phone" placeholder="Phone Number">
+        <input type="email" id="email" placeholder="Email">
+        <button id="" onclick="addEmployee()">Add Employee</button>
+        <table id="employeeTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Position</th>
+                    <th>Department</th>
+                    <th>Salary</th>
+                    <th>Date of Hire</th>
+                    <th>Phone</th>
+                    <th>Email</th>
+                    <button class="search"onclick="SearchEmployee()">Search</button>
+                    <button class="delete" onclick="UpdateEmployee()">Update</button>
+                    <button class="delete" onclick="DeleteEmployee()">Delete</button>
+                </tr>
+            </thead>
+            <tbody id="employeeTable">
+                <tr>
+                    <td>E001</td>
+                    <td>John Doe</td>
+                    <td>Manager</td>
+                    <td>HR</td>
+                    <td>$5000</td>
+                    <td>2023-01-15</td>
+                    <td>123-456-7890</td>
+                    <td>john.doe@example.com</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
