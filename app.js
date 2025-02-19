@@ -93,7 +93,34 @@ function addEmployee() {
                 document.getElementById("email").value = result.email;
             })
             .catch((error) => console.error(error));
+
+            //////////////Search by name/////////////////////////////////////////////
+
+            let Searchname = document.getElementById("search").value;
+            console.log("Search by name");
+
+            const requestOptions1 = {
+                method: "GET",
+                redirect: "follow"
+            };
+
+            fetch(`http://localhost:8080/employee/Employee-search-by-name${Searchname}`, requestOptions1)
+                .then((response) => response.json())
+                .then((result) => {
+                console.log(result);
+                document.getElementById("id").value = result.id;
+                document.getElementById("name").value = result.name;
+                document.getElementById("position").value = result.position;
+                document.getElementById("department").value = result.department;
+                document.getElementById("salary").value = result.salary;
+                document.getElementById("dateOfHire").value = result.date_of_hire;
+                document.getElementById("phone").value = result.phone_Number;
+                document.getElementById("email").value = result.email;
+               
+            })
+            .catch((error) => console.error(error));
     }
+
 
     function UpdateEmployee() {
         let id = document.getElementById("id").value;
